@@ -163,7 +163,7 @@ $emailBody = @"
   <title>Welcome to the Presidio Engineering Lab</title>
  </head>
  <body>
-    <p>Welcome to the Presidio Engineering Lab.  Please use the link below to reset your password and then take a look at the "Accessing the Presidio Lab" document on Sharepoint.<br>
+    <p>Welcome to the Presidio Engineering Lab.  Please use the link below to reset your password and then take a look at the Lab Wiki site for more information on using the lab.<br>
 
     </p>
     <table style="height: 200px; float: left;" border="1" width="800" cellspacing="0">
@@ -185,15 +185,15 @@ $emailBody = @"
     <td>${RawPassword}</td>
     </tr>
     <tr>
-    <td>Initial Password Reset Form</td>
+    <td>Initial Password Reset</td>
     <td>
-    <p><a href="https://password.presidiolab.com:9000/pwm">Initial Password Reset</a></p>
+    <p><a href="https://password.presidiolab.com:9000/pwm">Password Self-Service Portal</a></p>
     </td>
     </tr>
     <tr>
     <td>Getting Started Guide</td>
     <td>
-    <p><a href="http://orl-wiki.presidiolab.local/doku.php">Lab Information</a></p>
+    <p><a href="http://orl-wiki.presidiolab.local/doku.php">Lab Wiki Site</a></p>
     </td>
     </tr>
     </tbody>

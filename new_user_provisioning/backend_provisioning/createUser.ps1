@@ -151,8 +151,9 @@ $Password = ConvertTo-SecureString -String $RawPassword -asplaintext -force
 
 New-ADUser -SamAccountName $Username -UserPrincipalName $UPN -EmailAddress $EmailAddress -DisplayName $FullName -Name $FullName -GivenName $firstname -Surname $lastname -Instance $DN -Path "$OUDN" -ChangePasswordAtLogon $false -PasswordNeverExpires $true -Enabled $true -Description $Description -AccountPassword $Password
 
+If ($? -eq $true) {
 $TemplateUser | Select-Object -ExpandProperty memberof | Add-ADGroupMember -Members $Username
-
+}
 Write-Host "User: $Username created successfully."
 
 $emailBody = @"
@@ -164,7 +165,6 @@ $emailBody = @"
  </head>
  <body>
     <p>Welcome to the Presidio Engineering Lab.  Please use the link below to reset your password and then take a look at the Lab Wiki site for more information on using the lab.<br>
-
     </p>
     <table style="height: 200px; float: left;" border="1" width="800" cellspacing="0">
     <tbody>
